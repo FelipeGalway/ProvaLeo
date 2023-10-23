@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Nomes</title>
+    <link rel="stylesheet" href="/styles.css"/>
+</head>
+
+<body>
+    <h1>Cadastro Nome</h1>
+    <form action="/cadastroNome" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome">
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <form action="/mostrarNomes" method="get">
+        <span id="mostrar"></span>
+        <button type="submit">Mostrar Nomes</button>
+    </form>
+
+    <h2>Atualizar Nome</h2>
+    <form action="/atualizarNome" method="post">
+        <input type="hidden" name="_method" value="post">
+        <label for="nomeParaAtualizar">Nome para Atualizar:</label>
+        <input type="text" name="nomeParaAtualizar" id="nomeParaAtualizar">
+        <label for="nomeAtualizado">Nome Atualizado:</label>
+        <input type="text" name="nomeAtualizado" id="nomeAtualizado">
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <h2>Deletar Nome</h2>
+    <form action="/deletarNome" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <label for="nomeParaDeletar">Nome para Deletar:</label>
+        <input type="text" name="nomeParaDeletar" id="nomeParaDeletar">
+        <button type="submit">Deletar</button>
+    </form>
+</body>
+</html>
