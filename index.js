@@ -29,11 +29,9 @@ app.post("/cadastroNome", (req, res) => {
 // READ
 app.get("/mostrarNomes", (req, res) => {
     console.log("Nomes cadastrados:", nomes);
-
-    // Create a string with the names to display
-    const namesToDisplay = nomes.join(', '); // Join names with a comma and space
-
-    // Inject the names into the HTML response
+    
+    const namesToDisplay = nomes.join(', '); 
+    
     const htmlResponse = `
         <html lang="en">
         <head>
